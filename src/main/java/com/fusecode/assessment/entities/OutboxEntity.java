@@ -1,8 +1,10 @@
 package com.fusecode.assessment.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
 import java.util.UUID;
@@ -11,6 +13,8 @@ import java.util.UUID;
 @Entity
 @Builder
 @Table(name = "outbox")
+@AllArgsConstructor
+@NoArgsConstructor
 public class OutboxEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
